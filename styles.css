@@ -1,0 +1,77 @@
+.item-image{
+  height: 500px;
+  width: 110%;
+
+}
+h5{
+  color:grey;
+}
+body{
+  background-color: #9A616D;
+}
+.our-logo{
+  font-weight: bold;
+  font-family: monospace;
+  margin-left:15px;
+  font-size: 1.5rem;
+}
+.title-logo{
+  width: 30%;
+  height :auto;
+}
+.shashi{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Shalimar', cursive;
+  text-align: center;
+  width: 100%;
+  margin-top: 70px;
+}
+.ganesh-cards{
+  text-align: center;
+
+}
+.our-row{
+  margin-right: 0;
+  margin-left: 0;
+}
+.our-cols{
+  margin-bottom: 50px;
+}
+.form-label{
+  color: grey;
+  font-size: 1.2rem;
+}
+.title-block{
+  color:black;
+  font-weight: bold;
+  font-family: 'Shalimar', cursive;
+  padding-left: 100px;
+}
+h1{
+  padding-top:50px;
+  padding-bottom:0;
+}
+.phone{
+  text-align: center;
+  font-family: 'Shalimar', cursive;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.jinna{
+  color: red;
+}
+.dell{
+  position: absolute;
+  left: 200px;
+  width: 70%;
+  background-color: white;
+  margin-top: 50px;
+}
+.phone1{
+  text-align: center;
+  font-family: 'Shalimar', cursive;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
