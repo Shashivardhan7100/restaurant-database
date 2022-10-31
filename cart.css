@@ -4,3 +4,7 @@
 .bucket{
   padding-top: 100px;
 }
+.card-img-top{
+  width: 285px;
+  height: 200px;
+}
