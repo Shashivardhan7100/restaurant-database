@@ -1,1 +1,1 @@
-# restaurant-database
+# restaurant-database management system
