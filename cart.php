@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,28 +15,9 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
-        <a class="navbar-brand" href="#"><img class="title-logo"src="img/logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item ">
-              <a class="our-logo nav-link" href="main.html">Menu</a>
-            </li>
-            <li class="nav-item ">
-              <a class="our-logo nav-link" href="cart.html">Cart(0)</a>
-            </li>
-            <li class="nav-item">
-              <a class="our-logo nav-link" href="#">Orders</a>
-            </li>
-            <li class="nav-item">
-              <a class="our-logo nav-link" href="#">LogOut</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <?php
+      require_once('navbar.php');
+      ?>  
       <section class="h-100 gradient-custom">
   <div class="container py-5">
     <div class="bucket row d-flex justify-content-center my-4">
@@ -103,47 +87,6 @@
               <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                 <!-- Data -->
                 <p><strong>Stater-2</strong></p>
-                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                  title="Remove item">
-                  <span class="material-icons"> delete</span>
-                </button>
-                <!-- Data -->
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <!-- Quantity -->
-                <div class="d-flex mb-4" style="max-width: 300px">
-                  <div class="form-outline">
-                    <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
-                    <label class="form-label" for="form1">Quantity</label>
-                  </div>
-                </div>
-                <!-- Quantity -->
-
-                <!-- Price -->
-                <p class="text-start text-md-center">
-                  <strong>RS250</strong>
-                </p>
-                <!-- Price -->
-              </div>
-            </div>
-            <hr class="my-4" />
-            <!-- Single item -->
-            <div class="row">
-              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                <!-- Image -->
-                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                  <img src="product-images\stater-7.jpg" class="w-100" alt="" />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                  </a>
-                </div>
-                <!-- Image -->
-              </div>
-
-              <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                <!-- Data -->
-                <p><strong>STATER 1</strong></p>
                 <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
                   title="Remove item">
                   <span class="material-icons"> delete</span>

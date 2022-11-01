@@ -33,7 +33,7 @@
     }
     else if($row['password']==$v2)
     {
-        include('main.html');
+        include('mainbody.php');
     }
     else
     {
