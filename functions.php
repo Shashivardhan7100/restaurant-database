@@ -19,14 +19,14 @@ $example="
     print "$example";
 }
 
-function createcart()
+function createcart($image,)
 {
     $file="
     <div class=\"row\">
     <div class=\"col-lg-3 col-md-12 mb-4 mb-lg-0\">
       <!-- Image -->
       <div class=\"bg-image hover-overlay hover-zoom ripple rounded\" data-mdb-ripple-color=\"light\">
-        <img src=\"product-images\stater-7.jpg\" class=\"w-100\" alt=\"\" />
+        <img src=\"$image\" class=\"w-100\" alt=\"\" />
         <a href=\"#!\">
           <div class=\"mask\" style=\"background-color: rgba(251, 251, 251, 0.2)\"></div>
         </a>
