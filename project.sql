@@ -1,4 +1,5 @@
 
+
 create table customer(
 	customer_id int not null AUTO_INCREMENT,
     first_name varchar(20),
@@ -17,6 +18,7 @@ create table menu(
     item_name varchar(30),
     cost int ,
     Rating int,
+    img varchar(2000),
     primary key(item_id)
     );
     
@@ -94,3 +96,28 @@ create table Rating(
     );
     
 alter table employee add foreign key (dept_id) references department(dept_id);
+    
+ /*   item_id int not null AUTO_INCREMENT,
+    item_name varchar(30),
+    cost int ,
+    Rating int,
+    img varchar(20), */
+    
+    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\dish-11.jpg'),
+    ('pastree',250,'product-images\\dish-4.jpg'),('pastree',250,'product-images\\dish-5.jpg'),('pastree',250,'product-images\\dish-6.jpg'),
+    ('pastree',250,'product-images\\dish-7.jpg'),('pastree',250,'product-images\\dish-8.jpg'),('pastree',250,'product-images\\dish-9.jpg'),
+    ('pastree',250,'product-images\\dish-10.jpg');
+    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\dessert-5.jpg'),
+    ('pastree',250,'product-images\\dessert-6.jpg'),('pastree',250,'product-images\\dessert-7.jpg'),('pastree',250,'product-images\\dessert-8.jpg'),
+    ('pastree',250,'product-images\\dessert-9.jpg'),('pastree',250,'product-images\\dessert-10.jpg'),('pastree',250,'product-images\\dessert-11.jpg'),
+    ('pastree',250,'product-images\\dessert-12.jpg');
+    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\drink-1.jpg'),
+    ('pastree',250,'product-images\\drink-2.jpg'),('pastree',250,'product-images\\drink-3.jpg'),('pastree',250,'product-images\\drink-4.jpg'),
+    ('pastree',250,'product-images\\drink-5.jpg'),('pastree',250,'product-images\\drink-6.jpg'),('pastree',250,'product-images\\drink-7.jpg'),
+    ('pastree',250,'product-images\\drink-8.jpg');
+    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\stater-1.jpg'),
+    ('pastree',250,'product-images\\stater-2.jpg'),('pastree',250,'product-images\\stater-3.jpg'),('pastree',250,'product-images\\stater-4.jpg'),
+    ('pastree',250,'product-images\\stater-5.jpg'),('pastree',250,'product-images\\stater-6.jpg'),('pastree',250,'product-images\\stater-7.jpg'),
+    ('pastree',250,'product-images\\stater-8.jpg');
+    
+    
