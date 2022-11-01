@@ -3,7 +3,7 @@ function oncard($image,$name,$cost,$productid)
 {
 $example="
 <div class=\"our-cols col-lg-3\"> 
-<form action=\"practice.php\" method=\"post\">
+<form action=\"mainbody.php\" method=\"post\">
   <div class=\"ganesh-cards card\" style=\"width: 18rem;\">
   <img class=\"card-img-top\" src= \"$image\" alt=\"Card image cap\">
   <div class=\"card-body\">
@@ -19,7 +19,7 @@ $example="
     print "$example";
 }
 
-function createcart($image,)
+function createcart($image,$name,$cost,$id)
 {
     $file="
     <div class=\"row\">
@@ -35,28 +35,32 @@ function createcart($image,)
     </div>
 
     <div class=\"col-lg-5 col-md-6 mb-4 mb-lg-0\">
+      <form action=\"cart.php?action=remove&id=$id\" method=\"post\">
       <!-- Data -->
-      <p><strong>STATER 1</strong></p>
-      <button type=\"button\" class=\"btn btn-primary btn-sm me-1 mb-2\" data-mdb-toggle=\"tooltip\"
+      <p><strong>$name</strong></p>
+      <button type=\"submit\" name=\"remove\" class=\"btn btn-primary btn-sm me-1 mb-2\" data-mdb-toggle=\"tooltip\"
         title=\"Remove item\">
         <span class=\"material-icons\"> delete</span>
       </button>
       <!-- Data -->
+      </form>
     </div>
 
     <div class=\"col-lg-4 col-md-6 mb-4 mb-lg-0\">
       <!-- Quantity -->
       <div class=\"d-flex mb-4\" style=\"max-width: 300px\">
         <div class=\"form-outline\">
+        <form>
           <input id=\"form1\" min=\"0\" name=\"quantity\" value=\"1\" type=\"number\" class=\"form-control\" />
           <label class=\"form-label\" for=\"form1\">Quantity</label>
+          </form>
         </div>
       </div>
       <!-- Quantity -->
 
       <!-- Price -->
       <p class=\"text-start text-md-center\">
-        <strong>RS250</strong>
+        <strong>$cost</strong>
       </p>
       <!-- Price -->
     </div>
@@ -65,6 +69,7 @@ function createcart($image,)
 
   <hr class=\"my-4\" />
     ";
+
     print "$file";
 }
 ?>

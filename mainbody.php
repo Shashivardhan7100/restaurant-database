@@ -13,7 +13,7 @@ session_start();
         if(in_array($_POST['product_id'],$item_array_id))
         {
           echo "<script>alert('Product is already added to the cart')</script>";
-          echo "<script>window.location='practice.php'</script>";
+          echo "<script>window.location='mainbody.php'</script>";
         }
         else
         {

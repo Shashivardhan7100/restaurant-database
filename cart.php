@@ -1,5 +1,23 @@
 <?php
 session_start();
+include('mysqli_connect.php');
+include('functions.php');
+
+    if(isset($_POST['remove']))
+    {
+        if($_GET['action']=='remove')
+        {
+          foreach($_SESSION['cart'] as $key=>$value)
+          {
+            if($value["product_id"]==$_GET['id'])
+            {
+              unset($_SESSION['cart'][$key]);
+              echo "<script>alert('product has been removed from cart')</script>";
+              echo  "<script>window.location='cart.php'</script>";
+            }
+          }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -24,94 +42,47 @@ session_start();
       <div class="col-md-8">
         <div class="card mb-4">
           <div class="card-header py-3">
-            <h5 class="mb-0">Cart - 2 items</h5>
+            <h5 class="mb-0">
+
+            <?php
+            if(isset($_SESSION['cart']))
+            {
+                $count=count($_SESSION['cart']);
+                print "cart - $count";
+            }
+            else
+            {
+                $count=0;
+                print "cart - $count";
+            }
+            ?>
+
+               items</h5>
           </div>
           <div class="card-body">
-            <!-- Single item -->
-            <div class="row">
-              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                <!-- Image -->
-                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                  <img src="product-images\stater-7.jpg" class="w-100" alt="" />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                  </a>
-                </div>
-                <!-- Image -->
-              </div>
-
-              <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                <!-- Data -->
-                <p><strong>STATER 1</strong></p>
-                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                  title="Remove item">
-                  <span class="material-icons"> delete</span>
-                </button>
-                <!-- Data -->
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <!-- Quantity -->
-                <div class="d-flex mb-4" style="max-width: 300px">
-                  <div class="form-outline">
-                    <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
-                    <label class="form-label" for="form1">Quantity</label>
-                  </div>
-                </div>
-                <!-- Quantity -->
-
-                <!-- Price -->
-                <p class="text-start text-md-center">
-                  <strong>RS250</strong>
-                </p>
-                <!-- Price -->
-              </div>
-            </div>
-            <!-- Single item -->
-
-            <hr class="my-4" />
-
-            <!-- Single item -->
-            <div class="row">
-              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                <!-- Image -->
-                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                  <img src="product-images\stater-8.jpg"class="w-100" />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                  </a>
-                </div>
-                <!-- Image -->
-              </div>
-
-              <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                <!-- Data -->
-                <p><strong>Stater-2</strong></p>
-                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                  title="Remove item">
-                  <span class="material-icons"> delete</span>
-                </button>
-                <!-- Data -->
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <!-- Quantity -->
-                <div class="d-flex mb-4" style="max-width: 300px">
-                  <div class="form-outline">
-                    <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
-                    <label class="form-label" for="form1">Quantity</label>
-                  </div>
-                </div>
-                <!-- Quantity -->
-
-                <!-- Price -->
-                <p class="text-start text-md-center">
-                  <strong>RS250</strong>
-                </p>
-                <!-- Price -->
-              </div>
-            </div>
-            <!-- Single item -->
+            <?php
+                if(isset($_SESSION['cart']))
+                {
+                $product_id=array_column($_SESSION['cart'],'product_id');
+                $query="select * from menu";
+                $result=mysqli_query($dc,$query);
+                while($row=mysqli_fetch_assoc($result))
+                {
+                  foreach($product_id as $id)
+                  {
+                    if($row['item_id']==$id)
+                    {
+                      createcart($row['img'],$row['item_name'],$row['cost'],$row['item_id']);
+                    }
+                  }
+                }
+              }
+              else
+              {
+                print "<br>";
+                print "<p><h5>Cart is Empty</h5></p>";
+              }
+            ?>
           </div>
         </div>
       </div>
