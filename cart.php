@@ -12,6 +12,18 @@ include('functions.php');
             if($value["product_id"]==$_GET['id'])
             {
               unset($_SESSION['cart'][$key]);
+              foreach($_SESSION['req1'][$_GET['id']] as $key=>$value)
+              {
+                $v1=$value;
+              }
+              foreach($_SESSION['req2'][$_GET['id']] as $key=>$value)
+              {
+                $v2=$value;
+              }
+              $_SESSION['qtotal'][0]['totalquantity']-=$v1;
+              $_SESSION['total'][0]['totalamount']-=($v2)*($v1);
+              unset($_SESSION['req1'][$_GET['id']]);
+              unset($_SESSION['req2'][$_GET['id']]);
               echo "<script>alert('product has been removed from cart')</script>";
               echo  "<script>window.location='cart.php'</script>";
             }
@@ -34,7 +46,7 @@ include('functions.php');
   </head>
   <body>
       <?php
-      require_once('navbar.php');
+      require('navbar.php');
       ?>  
       <section class="h-100 gradient-custom">
   <div class="container py-5">
@@ -72,9 +84,21 @@ include('functions.php');
                   {
                     if($row['item_id']==$id)
                     {
-                      createcart($row['img'],$row['item_name'],$row['cost'],$row['item_id']);
+                        if(isset($_SESSION['req1'][$id]))
+                        {
+                        foreach($_SESSION['req1'][$id] as $key=>$value)
+                        {
+                          $v=$value;
+                        }
+                        createcart($row['img'],$row['item_name'],$row['cost'],$row['item_id'],$v);
+                        }
                     }
                   }
+                }
+                if(count($_SESSION['cart'])==0)
+                {
+                print "<br>";
+                print "<p><h5>Cart is Empty</h5></p>";
                 }
               }
               else
@@ -96,7 +120,21 @@ include('functions.php');
               <li
                 class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                 Products
-                <span>2</span>
+                <span ><p id="qtotal"><?php 
+                $v=0;
+                if(isset($_SESSION['qtotal']))
+                {
+                   
+                  foreach($_SESSION['qtotal'][0] as $key=>$value) 
+                  { $v= $value;
+                  } 
+                  print "$v"; 
+                }
+                else
+                {
+                  print "$v";
+                }
+                ?></p></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                 Cash On Delivery
@@ -107,7 +145,18 @@ include('functions.php');
                 <div>
                   <strong>Total amount</strong>
                 </div>
-                <span><strong>RS500</strong></span>
+                <span><strong id="gtotal"><?php
+                $v=0;
+                if(isset($_SESSION['total']))
+                {
+                  $v=$_SESSION['total'][0]['totalamount']; 
+                  print "$v";
+                } 
+                else
+                {
+                  print "$v";
+                }
+                ?></strong></span>
               </li>
             </ul>
 
@@ -120,5 +169,29 @@ include('functions.php');
     </div>
   </div>
 </section>
+
+<!--<script>
+  var gt=0;
+  var qt=0;
+  var iprice=document.getElementByClassName('iprice');
+  var iquantity=document.getElementByClassName('iquantity');
+  var gtotal=document.getElementById('gtotal');
+  var qtotal=document.getElementById('qtotal');
+  function subtotal()
+  {
+    gt=0;
+    qt=0;
+    for( i=0;i<iprice.length;i++)
+    {
+      gt+=(iprice[i].value)*(iquantity[i].value);
+      qt+=(iquantity[i].value);
+    }
+
+    gtotal.innerText=gt;
+    qtotal.innerText=qt;
+  }
+  subtotal();
+  </script>-->
+
   </body>
 </html>

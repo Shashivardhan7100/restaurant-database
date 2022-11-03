@@ -1,3 +1,4 @@
+
 <?php
 function oncard($image,$name,$cost,$productid)
 {
@@ -9,8 +10,12 @@ $example="
   <div class=\"card-body\">
   <h5 class=\"card-title\">$name</h5>
   <p>PRICE: $cost</p>
+  <div style=\"margin-bottom:10px\">
+  <input type=\"int\" name=\"quantity\" placeholder=\"Quantity\" required>
+  </div>
   <input type=\"submit\" name='add' class=\"btn btn-primary\" value=\"Add To Cart\">
   <input type='hidden' name='product_id' value='$productid'>
+  <input type='hidden' name='cost' value='$cost'>
   </div> 
     </div>
     </form>
@@ -19,7 +24,7 @@ $example="
     print "$example";
 }
 
-function createcart($image,$name,$cost,$id)
+function createcart($image,$name,$cost,$id,$quantity)
 {
     $file="
     <div class=\"row\">
@@ -50,17 +55,17 @@ function createcart($image,$name,$cost,$id)
       <!-- Quantity -->
       <div class=\"d-flex mb-4\" style=\"max-width: 300px\">
         <div class=\"form-outline\">
-        <form>
-          <input id=\"form1\" min=\"0\" name=\"quantity\" value=\"1\" type=\"number\" class=\"form-control\" />
+       <div >
+        <input value=\"$quantity\"style=\"width:108px\" >
+        </div>
           <label class=\"form-label\" for=\"form1\">Quantity</label>
-          </form>
         </div>
       </div>
       <!-- Quantity -->
 
       <!-- Price -->
       <p class=\"text-start text-md-center\">
-        <strong>$cost</strong>
+        <strong>$cost<input type=\"hidden\" class=\"iprice\" value=\"$cost\"></strong>
       </p>
       <!-- Price -->
     </div>
