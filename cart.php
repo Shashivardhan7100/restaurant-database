@@ -47,7 +47,7 @@ include('functions.php');
   <body>
       <?php
       require('navbar.php');
-      ?>  
+      ?>
       <section class="h-100 gradient-custom">
   <div class="container py-5">
     <div class="bucket row d-flex justify-content-center my-4">
@@ -120,15 +120,15 @@ include('functions.php');
               <li
                 class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                 Products
-                <span ><p id="qtotal"><?php 
+                <span ><p id="qtotal"><?php
                 $v=0;
                 if(isset($_SESSION['qtotal']))
                 {
-                   
-                  foreach($_SESSION['qtotal'][0] as $key=>$value) 
+
+                  foreach($_SESSION['qtotal'][0] as $key=>$value)
                   { $v= $value;
-                  } 
-                  print "$v"; 
+                  }
+                  print "$v";
                 }
                 else
                 {
@@ -149,12 +149,12 @@ include('functions.php');
                 $v=0;
                 if(isset($_SESSION['total']))
                 {
-                  $v=$_SESSION['total'][0]['totalamount']; 
-                  print "$v";
-                } 
+                  $v=$_SESSION['total'][0]['totalamount'];
+                  print "$v RS";
+                }
                 else
                 {
-                  print "$v";
+                  print "$v RS";
                 }
                 ?></strong></span>
               </li>

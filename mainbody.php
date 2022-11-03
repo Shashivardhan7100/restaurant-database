@@ -85,6 +85,7 @@ session_start();
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
   <body>
     <?php
@@ -97,13 +98,13 @@ session_start();
     $result=mysqli_query($dc,$query);
     $num=mysqli_num_rows($result);
     $v=1; ?>
-    
+
     <?php
     while(($row=mysqli_fetch_array($result))&&($v<=$num))
     {
-        
+
 ?>
-    
+
     <?php if($v==1){ ?>
         <div class="our-row row">
         <div class="shashi">
@@ -135,7 +136,7 @@ session_start();
     </div>
    <?php }?>
         <?php oncard ($row['img'],$row['item_name'],$row['cost'],$row['item_id']) ?>
-   
+
   <?php
   if($v==8||$v==16||$v==24||$v==32)
   {

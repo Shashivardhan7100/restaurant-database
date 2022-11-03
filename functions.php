@@ -3,20 +3,20 @@
 function oncard($image,$name,$cost,$productid)
 {
 $example="
-<div class=\"our-cols col-lg-3\"> 
+<div class=\"our-cols col-lg-3\">
 <form action=\"mainbody.php\" method=\"post\">
   <div class=\"ganesh-cards card\" style=\"width: 18rem;\">
   <img class=\"card-img-top\" src= \"$image\" alt=\"Card image cap\">
   <div class=\"card-body\">
   <h5 class=\"card-title\">$name</h5>
-  <p>PRICE: $cost</p>
+  <p>PRICE: $cost RS</p>
   <div style=\"margin-bottom:10px\">
-  <input type=\"int\" name=\"quantity\" placeholder=\"Quantity\" required>
+  <input type=\"int\" name=\"quantity\" placeholder=\"Quantity\" required style=\"width:108px\">
   </div>
   <input type=\"submit\" name='add' class=\"btn btn-primary\" value=\"Add To Cart\">
   <input type='hidden' name='product_id' value='$productid'>
   <input type='hidden' name='cost' value='$cost'>
-  </div> 
+  </div>
     </div>
     </form>
     </div>";
@@ -65,7 +65,7 @@ function createcart($image,$name,$cost,$id,$quantity)
 
       <!-- Price -->
       <p class=\"text-start text-md-center\">
-        <strong>$cost<input type=\"hidden\" class=\"iprice\" value=\"$cost\"></strong>
+        <strong>$cost<input type=\"hidden\" class=\"iprice\" value=\"$cost\"> RS</strong>
       </p>
       <!-- Price -->
     </div>
