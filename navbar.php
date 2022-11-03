@@ -28,7 +28,7 @@
         <a class="our-logo nav-link" href="#">Orders</a>
       </li>
       <li class="nav-item">
-        <a class="our-logo nav-link" href="#">LogOut</a>
+        <a class="our-logo nav-link" href="logout.php">LogOut</a>
       </li>
     </ul>
   </div>

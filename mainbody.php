@@ -9,29 +9,67 @@ session_start();
     {
       if(isset($_SESSION['cart']))
       {
+        //setcookie($_POST['product_id'],$_POST['quantity']);
+        //setcookie(100*$_POST['product_id'],$_POST['cost']);
+
+        $v1 =($_POST['cost'])*($_POST['quantity']);
+        $v2 =($_POST['quantity']);
         $item_array_id=array_column($_SESSION['cart'],"product_id");
         if(in_array($_POST['product_id'],$item_array_id))
         {
-          echo "<script>alert('Product is already added to the cart')</script>";
-          echo "<script>window.location='mainbody.php'</script>";
+          foreach($item_array_id as $key=>$value)
+          {
+              if($value==$_POST['product_id'])
+              {
+                $_SESSION['req1'][$_POST['product_id']]['product_id']+=$_POST['quantity'];
+                $_SESSION['qtotal'][0]['totalquantity']+=$v2;
+                $_SESSION['total'][0]['totalamount']+=$v1;
+              }
+          }
+          /*echo "<script>alert('Product is already added to the cart')</script>";
+          echo "<script>window.location='mainbody.php'</script>";*/
         }
         else
         {
           $count=count($_SESSION['cart']);
           $item_array=array(
-            'product_id'=>$_POST['product_id']
+            'product_id'=>$_POST['product_id'],
+          );
+          $_SESSION['req1'][$_POST['product_id']]=array(
+            'product_id'=>$_POST['quantity'],
+          );
+          $_SESSION['req2'][$_POST['product_id']]=array(
+            'product_id'=>$_POST['cost']
           );
           $_SESSION['cart'][$count]=$item_array;
-
+          //$_SESSION['quantity'][$_POST['product_id']]=$item_array2;
+          $_SESSION['qtotal'][0]['totalquantity']+=$v2;
+          $_SESSION['total'][0]['totalamount']+=$v1;
         }
+
       }
       else
       {
         $item_array=array(
-          'product_id'=>$_POST['product_id']
+          'product_id'=>$_POST['product_id'],
+        );
+        $_SESSION['req1'][$_POST['product_id']]=array(
+          'product_id'=>$_POST['quantity'],
+        );
+        $_SESSION['req2'][$_POST['product_id']]=array(
+          'product_id'=>$_POST['cost']
         );
 
         $_SESSION['cart'][0]=$item_array;
+        $v1 =($_POST['cost'])*($_POST['quantity']);
+        $v2 =($_POST['quantity']);
+        //$_SESSION['quantity'][$_POST['product_id']]=$item_array2;
+        $_SESSION['qtotal'][0]=array(
+          'totalquantity'=>$v2
+        );
+        $_SESSION['total'][0]=array(
+          'totalamount'=>$v1
+        );
       }
     }
 ?>

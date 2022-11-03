@@ -1,4 +1,6 @@
 <?php
+  setcookie('email',$_POST['email']);
+  setcookie('passwort',$_POST['password']);
   include('mysqli_connect.php');
 ?>
 <!DOCTYPE html>
