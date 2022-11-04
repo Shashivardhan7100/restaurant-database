@@ -24,7 +24,7 @@
 
       </li>
       <li class="nav-item">
-        <a class="our-logo nav-link" href="#">Orders</a>
+        <a class="our-logo nav-link" href="orders.php">Orders</a>
       </li>
       <li class="nav-item">
         <a class="our-logo nav-link" href="logout.php">LogOut</a>

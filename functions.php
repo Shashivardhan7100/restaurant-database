@@ -77,4 +77,20 @@ function createcart($image,$name,$cost,$id,$quantity)
 
     print "$file";
 }
+
+function orders($sno,$order_id,$order_status,$cost,$agentname,$phonenumber)
+{
+  $v2= "
+  <tr>
+      <th scope=\"row\">$sno</th>
+      <td>$order_id</td>
+      <td>$order_status</td>
+      <td>$cost</td>
+      <td>$agentname</td>
+      <td>$phonenumber</td>
+    </tr>
+    ";
+    print "$v2";
+}
 ?>
+

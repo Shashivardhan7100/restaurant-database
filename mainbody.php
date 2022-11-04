@@ -1,5 +1,8 @@
 <?php
-session_start();
+  if(!session_start())
+  {
+    session_start();
+  }
 ?>
 <?php
     include('mysqli_connect.php');

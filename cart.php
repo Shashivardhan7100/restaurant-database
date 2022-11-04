@@ -159,10 +159,11 @@ include('functions.php');
                 ?></strong></span>
               </li>
             </ul>
-
-            <button type="button" class="btn btn-primary btn-lg btn-block">
+            <form action="orders.php" method="post">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
               ORDER
             </button>
+            </form>
           </div>
         </div>
       </div>

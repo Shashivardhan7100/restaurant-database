@@ -37,7 +37,9 @@ create table employee(
     
 create table orders(
 order_id int not null auto_increment,
-ocurrent_status varchar(20),
+ocurrent_status varchar(20) default 'accepted',
+agentname varchar(200) default 'NULL',
+phonenumber varchar(200) default 'NULL',
 order_bill int,
 ordered_items varchar(200),
 ordered_date date,

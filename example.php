@@ -1,6 +1,18 @@
 <?php
-  setcookie('email',$_POST['email']);
-  setcookie('passwort',$_POST['password']);
+    session_start();
+  include('functions.php');
+  include('mysqli_connect.php');
+  $v=$_POST['email'];
+  $query="select * from customer where email_id='$v'";
+  $result=mysqli_query($dc,$query);
+  $row=mysqli_fetch_array($result);
+  if(isset($row['customer_id']))
+  {
+  $_SESSION['details'][0]=array(
+    'email'=>$_POST['email'],
+    'customer_id'=>$row['customer_id']
+  );
+  }
   include('mysqli_connect.php');
 ?>
 <!DOCTYPE html>
@@ -13,6 +25,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
   <?php
@@ -35,7 +55,7 @@
     }
     else if($row['password']==$v2)
     {
-        include('mainbody.php');
+        include('body5.php');
     }
     else
     {
