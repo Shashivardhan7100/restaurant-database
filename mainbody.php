@@ -135,7 +135,7 @@
    <?php if($v==33){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>STATERS</h1>
+  <h1 style="color:white">STATERS</h1>
     </div>
    <?php }?>
         <?php oncard ($row['img'],$row['item_name'],$row['cost'],$row['item_id']) ?>

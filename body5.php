@@ -19,31 +19,31 @@
     <?php if($v==1){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>DISHES</h1>
+  <h1 style="color:white">DISHES</h1>
     </div>
    <?php }?>
    <?php if($v==9){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>DESSERTS</h1>
+  <h1 style="color:white">DESSERTS</h1>
     </div>
    <?php }?>
    <?php if($v==17){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>DRINKS</h1>
+  <h1 style="color:white">DRINKS</h1>
     </div>
    <?php }?>
    <?php if($v==25){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>STATERS</h1>
+  <h1 style="color:white">STATERS</h1>
     </div>
    <?php }?>
    <?php if($v==33){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>STATERS</h1>
+  <h1 style="color:white">STATERS</h1>
     </div>
    <?php }?>
         <?php oncard ($row['img'],$row['item_name'],$row['cost'],$row['item_id']) ?>
