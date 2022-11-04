@@ -35,7 +35,7 @@
     {
     if(mysqli_query($dc,$query))
       {
-        include('body1.html');
+        include('login.html');
       }
       else
       {
