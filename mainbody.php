@@ -90,7 +90,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
-  <body>
+  <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <?php
       require('navbar.php');
     ?>
@@ -111,25 +111,25 @@
     <?php if($v==1){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>DISHES</h1>
+  <h1 style="color:white">DISHES</h1>
     </div>
    <?php }?>
    <?php if($v==9){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>DESSERTS</h1>
+  <h1 style="color:white">DESSERTS</h1>
     </div>
    <?php }?>
    <?php if($v==17){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>DRINKS</h1>
+  <h1 style="color:white">DRINKS</h1>
     </div>
    <?php }?>
    <?php if($v==25){ ?>
         <div class="our-row row">
         <div class="shashi">
-  <h1>STATERS</h1>
+  <h1 style="color:white">STATERS</h1>
     </div>
    <?php }?>
    <?php if($v==33){ ?>

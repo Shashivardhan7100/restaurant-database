@@ -44,7 +44,7 @@ include('functions.php');
 <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body >
       <?php
       require('navbar.php');
       ?>
