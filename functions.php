@@ -56,9 +56,9 @@ function createcart($image,$name,$cost,$id,$quantity)
       <div class=\"d-flex mb-4\" style=\"max-width: 300px\">
         <div class=\"form-outline\">
        <div >
-        <input value=\"$quantity\"style=\"width:108px\" >
+        <label style=\"width:108px;text-align:center\" >$quantity</label>
         </div>
-          <label class=\"form-label\" for=\"form1\">Quantity</label>
+          <label class=\"form-label\" for=\"form1\" style=\"margin-left:22px\">Quantity</label>
         </div>
       </div>
       <!-- Quantity -->
@@ -93,4 +93,3 @@ function orders($sno,$order_id,$order_status,$cost,$agentname,$phonenumber)
     print "$v2";
 }
 ?>
-
