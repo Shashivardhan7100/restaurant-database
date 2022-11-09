@@ -1,5 +1,5 @@
 <?php
-include('mysqli_connect.php');
+  include('mysqli_connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,15 +30,18 @@ include('mysqli_connect.php');
     $email=$_POST['email'];
     $password=$_POST['password'];
     $confirm_password=$_POST['confirm_password'];
+    $salary=$_POST['salary'];
      $query1="select count(email_id) as count from employee where email_id='$email'"; 
      $result=mysqli_query($dc,$query1);
      $row=mysqli_fetch_array($result);
-    $query="insert into customer(first_name,ph_no,email_id,address,gender,b_date,password) values ('$name','$ph_no','$email','$address','$gender','$birthdate','$password')";
+    $query="insert into employee(name,ph_no,email_id,address,gender,birthdate,password,salary) values ('$name','$ph_no','$email','$address','$gender','$birthdate','$password',$salary)";
     if(($row['count']==0))
     {
     if(mysqli_query($dc,$query))
       {
-        include('login.html');
+        echo "<script>alert('Employee added successfully...')</script>";
+          echo "<script>window.location='admin.html'</script>";
+        /*include('admin.html');*/
       }
       else
       {
@@ -49,15 +52,19 @@ include('mysqli_connect.php');
     }
     else
     {
-      print "<h4><p>Already registered with this email ID</p></h4>";
-      print "<p>You can<a href=\"login.html\" > Login </a>here</p>";
+          echo "<script>alert('Already Employee exists with this email_id...!')</script>";
+          echo "<script>window.location='add_employee.html'</script>";
+      /*print "<h4><p>Already registered with this email ID</p></h4>";
+      print "<p>You can<a href=\"login.html\" > Login </a>here</p>";*/
     }
       //include('example.html');
     }
     else
     {
-      print "<h3><p >password didn't match with confirmed password</p></h3>";
-      print "<p ><a href=\"register.html\">Register</a> here</p>";
+      echo "<script>alert('password didn't match with confirmed password..')</script>";
+          echo "<script>window.location='add_employee.html'</script>";
+      /*print "<h3><p >password didn't match with confirmed password</p></h3>";
+      print "<p ><a href=\"register.html\">Register</a> here</p>";*/
     }
      ?>
 </body>

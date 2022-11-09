@@ -1,3 +1,7 @@
+<?php
+    include('mysqli_connect.php');
+    include('functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -52,30 +56,16 @@
     </tr>
   </thead>
   <tbody >
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+    <?php
+        $query="select * from orders";
+        $result=mysqli_query($dc,$query);
+        $i=0;
+        while($row = mysqli_fetch_array($result))
+        {
+          $i++;
+            orders($i,$row['order_id'],$row['ocurrent_status'],$row['order_bill'],$row['agentname'],$row['phonenumber']);
+        }
+    ?>
   </tbody>
 </table>
 </div>
