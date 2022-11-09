@@ -14,29 +14,10 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
-  <body style="background-image:url(https://lavalavabeachclub.com/kauai/wp-content/gallery/outdoor-dining/LLBC-Kauai-Side-Beach-Seating.jpg);background-size:cover;background-repeat:no-repeat">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
-  <a class="navbar-brand" href="#"><img class="title-logo"src="img/logo.png" alt=""></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item ">
-        <a class="our-logo nav-link" href="main.html">Menu</a>
-      </li>
-      <li class="nav-item ">
-        <a class="our-logo nav-link" href="cart.html">Cart(0)</a>
-      </li>
-      <li class="nav-item">
-        <a class="our-logo nav-link" href="#">Orders</a>
-      </li>
-      <li class="nav-item">
-        <a class="our-logo nav-link" href="#">LogOut</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <body>
+    <?php
+        include('navbar.php');
+    ?>
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100" style="margin-top: 100px;">
       <div class="row justify-content-center align-items-center h-100">
@@ -44,16 +25,16 @@
           <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"style="display:flex; justify-content: center;">TABLE RESERVATIONS</h3>
-              <form action="menuchange.php" method="post">
+              <form action="reservation.php" method="post">
                 <div class="row">
-                  <div class="col-md-6 mb-4">
+                  <!--<div class="col-md-6 mb-4">
   
                     <div class="form-outline">
                         <input type="email" id="emailAddress" name="email" class="form-control form-control-lg" required />
                         <label class="form-label" for="emailAddress"style="display:flex; justify-content: center;font-weight: 400;color:black">Email</label>
                     </div>
   
-                  </div>
+                  </div>-->
                   <div class="col-md-6 mb-4 d-flex align-items-center">
   
                     <div class="form-outline">

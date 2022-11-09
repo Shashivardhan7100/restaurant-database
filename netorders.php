@@ -2,13 +2,6 @@
     session_start();
     include('mysqli_connect.php');
     include('functions.php');
-    if($_SERVER['REQUEST_METHOD']=='POST')
-    {
-      $id=$_POST['id'];
-      $status=$_POST['status'];
-      $query5="update orders set ocurrent_status='$status' where order_id='$id'";
-      mysqli_query($dc,$query5);
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -61,6 +54,8 @@
   <tbody >
     <tr>
       <?php
+      if(isset($_SESSION['details']))
+      {
       $v=$_SESSION['details'][0]['email'];
         $query="select * from employee where email_id='$v'";
         $result=mysqli_query($dc,$query);
@@ -81,13 +76,14 @@
           $Unumber=$row3['Ph_no'];
           $address=$row3['address'];
           $cost=$row['order_bill'];
+          $status=$row['ocurrent_status'];
             $x=$row['ocurrent_status'];
-            $x1="delivered";
-            if($x!=$x1)
-            {
-                table($i,$id,$Uname,$Unumber,$address,$cost);
-            }
+            
+            
+                table2($i,$id,$status,$Uname,$Unumber,$address,$cost);
+            
         }
+    }
       ?>
   </tbody>
 </table>

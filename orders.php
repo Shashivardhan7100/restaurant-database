@@ -72,7 +72,7 @@
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">DATE</th>
       <th scope="col">ORDER_ID</th>
       <th scope="col">STATUS</th>
       <th scope="col">COST</th>
@@ -88,11 +88,13 @@
         $number=mysqli_num_rows($result);
         if($number!=0)
         {
-         $i=1;
+         
         while($row=mysqli_fetch_array($result))
         {
+            
+            $i=date("Y/m/d");
             orders($i,$row['order_id'],$row['ocurrent_status'],$row['order_bill'],$row['agentname'],$row['phonenumber']);
-            $i++;
+            
         }
         }
         else

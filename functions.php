@@ -121,4 +121,23 @@ function table($i,$id,$Uname,$Unumber,$address,$cost)
 
     print "$tables";
 }
+
+function table2($i,$id,$status,$Uname,$Unumber,$address,$cost)
+{
+    $tables="
+    <tr>
+      <th scope=\"row\">$i</th>
+      <td>$id</td>
+      <td>$status</td>
+      <td>$Uname</td>
+      <td>$Unumber</td>
+      <td>$address</td>
+      <td>$cost</td>
+    </tr>
+    ";
+
+    print "$tables";
+}
+
+
 ?>
