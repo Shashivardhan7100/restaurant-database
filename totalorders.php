@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
         <a class="navbar-brand" href="admin.html"><img class="title-logo"src="img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

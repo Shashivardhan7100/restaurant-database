@@ -22,10 +22,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
-        <a class="navbar-brand" href="#"><img class="title-logo"src="img/logo.png" alt=""></a>
+        <a class="navbar-brand" href="our_agent.php"><img class="title-logo"src="img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +47,7 @@
         </div>
       </nav>
       <div class="container"style=" margin-top : 100px;">
-        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900">CURRENT ORDERS</h1>
+        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white">CURRENT ORDERS</h1>
         <div class="mx-auto">
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >

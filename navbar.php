@@ -21,7 +21,6 @@
                 print "<a class=\"our-logo nav-link\" href=\"cart.php\" style=\"font-size:1.25rem\">Cart($count)</a>";
             }
             ?>
-
       </li>
       <li class="nav-item " >
         <a class="our-logo nav-link" href="reservation.php" style="font-size:1.25rem">REservations</a>
@@ -30,7 +29,10 @@
         <a class="our-logo nav-link" href="orders.php" style="font-size:1.25rem">Orders</a>
       </li>
       <li class="nav-item">
-        <a class="our-logo nav-link" href="logout.php" style="font-size:1.25rem">SIGNout</a>
+    <a class="our-logo nav-link" href="profile.php" style="font-size:1.25rem">PROfile</a>
+      </li>
+      <li class="nav-item">
+    <a class="our-logo nav-link" href="logout.php" style="font-size:1.25rem">SIGNout</a>
       </li>
     </ul>
   </div>

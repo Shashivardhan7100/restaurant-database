@@ -16,9 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
-        <a class="navbar-brand" href="#"><img class="title-logo"src="img/logo.png" alt=""></a>
+        <a class="navbar-brand" href="our_agent.php"><img class="title-logo"src="img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +37,7 @@
         </div>
       </nav>
       <div class="container"style=" margin-top : 100px;">
-        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900">CURRENT ORDERS</h1>
+        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white">CURRENT ORDERS</h1>
         <div class="mx-auto">
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >
@@ -63,7 +63,7 @@
         $v1=$row1['name'];
         $query2="select * from orders where agentname='$v1'";
         $result2=mysqli_query($dc,$query2);
-        
+
         while($row=mysqli_fetch_array($result2))
         {
           $i=date("Y/m/d");
@@ -78,10 +78,10 @@
           $cost=$row['order_bill'];
           $status=$row['ocurrent_status'];
             $x=$row['ocurrent_status'];
-            
-            
+
+
                 table2($i,$id,$status,$Uname,$Unumber,$address,$cost);
-            
+
         }
     }
       ?>
