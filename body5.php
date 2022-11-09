@@ -1,4 +1,4 @@
-<body>
+<body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <?php
       require('navbar.php');
     ?>
