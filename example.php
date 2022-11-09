@@ -37,7 +37,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
-<body style="background-image:url('login-img.webp');background-size:cover;background-repeat:no-repeat">
+<body >
   <?php
     ini_set('display_errors',1);
     error_reporting(E_ALL);
