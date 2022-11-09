@@ -2,20 +2,6 @@
     session_start();
   include('functions.php');
   include('mysqli_connect.php');
-  if($_SERVER['REQUEST_METHOD']=='POST')
-  {
-  $v=$_POST['email'];
-  $query="select * from customer where email_id='$v'";
-  $result=mysqli_query($dc,$query);
-  $row=mysqli_fetch_array($result);
-  if(isset($row['customer_id']))
-  {
-  $_SESSION['details'][0]=array(
-    'email'=>$_POST['email'],
-    'customer_id'=>$row['customer_id']
-  );
-  }
-  }
   include('mysqli_connect.php');
 ?>
 <!DOCTYPE html>
@@ -58,6 +44,20 @@
     }
     else if($row['password']==$v2)
     {
+      if($_SERVER['REQUEST_METHOD']=='POST')
+      {
+      $v=$_POST['email'];
+      $query="select * from customer where email_id='$v'";
+      $result=mysqli_query($dc,$query);
+      $row=mysqli_fetch_array($result);
+      if(isset($row['customer_id']))
+      {
+      $_SESSION['details'][0]=array(
+        'email'=>$_POST['email'],
+        'customer_id'=>$row['customer_id']
+      );
+      }
+      }
         include('body5.php');
     }
     else
