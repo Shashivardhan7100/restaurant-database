@@ -18,7 +18,7 @@
                 if($row['password']==$password)
                 {
                     echo "<script>alert('logged in successfully...')</script>";
-                    echo  "<script>window.location='our_agent.html'</script>";
+                    echo  "<script>window.location='our_agent.php'</script>";
                 }
                 else
                 {
@@ -26,10 +26,25 @@
                     echo  "<script>window.location='agentlogin.html'</script>";
                 }
             }
-            else
+            else if($num==0)
             {
-                echo "<script>alert('Employee doesn't exists...!')</script>";
-                echo  "<script>window.location='agentlogin.html'</script>";
+                print "<p>You don't belong to our company</p>";
             }
     }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>Foodilite</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+</html>
