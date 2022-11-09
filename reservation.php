@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('mysqli_connect.php');
+include('functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
