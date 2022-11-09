@@ -2,6 +2,8 @@
     session_start();
   include('functions.php');
   include('mysqli_connect.php');
+  if($_SERVER['REQUEST_METHOD']=='POST')
+  {
   $v=$_POST['email'];
   $query="select * from customer where email_id='$v'";
   $result=mysqli_query($dc,$query);
@@ -12,6 +14,7 @@
     'email'=>$_POST['email'],
     'customer_id'=>$row['customer_id']
   );
+  }
   }
   include('mysqli_connect.php');
 ?>

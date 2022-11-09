@@ -31,7 +31,6 @@ create table employee(
     ph_no varchar(100),
     email_id varchar(200),
     password varchar(100),
-    confirmpassword varchar(100),
     salary int,
     Working_hrs varchar(40),
     start_date date,
@@ -110,7 +109,7 @@ alter table employee add foreign key (dept_id) references department(dept_id);
     Rating int,
     img varchar(20), */
     
-    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\dish-11.jpg'),
+    insert into menu(item_name,cost,img) values ('chicken',250,'product-images\\dish-11.jpg'),
     ('pastree',250,'product-images\\dish-4.jpg'),('pastree',250,'product-images\\dish-5.jpg'),('pastree',250,'product-images\\dish-6.jpg'),
     ('pastree',250,'product-images\\dish-7.jpg'),('pastree',250,'product-images\\dish-8.jpg'),('pastree',250,'product-images\\dish-9.jpg'),
     ('pastree',250,'product-images\\dish-10.jpg');

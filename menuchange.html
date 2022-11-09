@@ -13,30 +13,30 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
-        <a class="navbar-brand" href="admin.html"><img class="title-logo"src="img/logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item ">
-              <a class="our-logo nav-link" href="admin.html">Menu_Status</a>
-            </li>
-            <li class="nav-item ">
-              <a class="our-logo nav-link" href="menuchange.html">Menu_Change</a>
-            </li>
-            <li class="nav-item">
-              <a class="our-logo nav-link" href="totalorders.html">Orders</a>
-            </li>
-            <li class="nav-item ">
-              <a class="our-logo nav-link" href="assignorder.html">Assign_Order</a>
-            </li>
-            <li class="nav-item ">
-              <a class="our-logo nav-link" href="add_employee.html">Add_Employee</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="admin.html"><img class="title-logo"src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="our-logo nav-link" href="admin.html">Menu_Status</a>
+          </li>
+          <li class="nav-item ">
+            <a class="our-logo nav-link" href="menuchange.html">Menu_Change</a>
+          </li>
+          <li class="nav-item">
+            <a class="our-logo nav-link" href="totalorders.php">Orders</a>
+          </li>
+          <li class="nav-item ">
+            <a class="our-logo nav-link" href="assignorder.html">Assign_Order</a>
+          </li>
+          <li class="nav-item ">
+            <a class="our-logo nav-link" href="add_employee.html">Add_Employee</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
       <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100" style="margin-top: 50px;">
           <div class="row justify-content-center align-items-center h-100">
@@ -44,28 +44,27 @@
               <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">UPDATE MENU</h3>
-                  <form action="" method="post">
+                  <form action="menuchange.php" method="post">
                     <div class="row">
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" id="firstName" name="name" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="firstName">Menu_Name</label>
+                          <input type="text" id="name" name="name" class="form-control form-control-lg" required/>
+                          <label class="form-label" for="name">Menu_Name</label>
                         </div>
       
                       </div>
                       <div class="col-md-6 mb-4 d-flex align-items-center">
       
                         <div class="form-outline">
-                            <input type="tel" id="phoneNumber" name="ph_no" class="form-control form-control-lg" required/>
-                            <label class="form-label" for="phoneNumber">PRICE</label>
-                          </div>
-      
+                            <input type="number" id="price" name="price" class="form-control form-control-lg" />
+                            <label class="form-label" for="price">PRICE</label>
+                          </div>      
                       </div>
                     </div>
                     <div class="row">
                         <div>
-                      <input type="url"class="form-control form-control-lg" required/>
+                      <input type="text" name="image" class="form-control form-control-lg" />
                       <label class="form-label" for="image">IMAGE_URL</label>
                       </div>
                     </div>
