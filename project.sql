@@ -1,5 +1,4 @@
 
-
 create table customer(
 	customer_id int not null AUTO_INCREMENT,
     first_name varchar(20),
@@ -57,9 +56,12 @@ foreign key (emp_id) references employee(emp_id)
 );
 
 create table table_reg(
-	table_no int not null ,
-    tcurrent_status varchar(20) default 'not reserved',
+	table_no int not null AUTO_INCREMENT,
+    tcurrent_status varchar(20) default 'reserved',
     customer_id int,
+    customer_name varchar(200),
+    total_members int,
+    slot varchar(200),
     emp_id int,
     primary key(table_no),
     foreign key (customer_id) references customer(customer_id)
