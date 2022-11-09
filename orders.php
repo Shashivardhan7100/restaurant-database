@@ -81,7 +81,7 @@
     </tr>
   </thead>
   <tbody >
-    <?php
+    <?php 
         $v=$_SESSION['details'][0]['customer_id'];
         $query="select * from orders where customer_id='$v'";
         $result=mysqli_query($dc,$query);

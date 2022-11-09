@@ -27,14 +27,14 @@
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"style="display:flex; justify-content: center;">TABLE RESERVATIONS</h3>
               <form action="reservation.php" method="post">
                 <div class="row">
-                  <!--<div class="col-md-6 mb-4">
+                  <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
                         <input type="email" id="emailAddress" name="email" class="form-control form-control-lg" required />
                         <label class="form-label" for="emailAddress"style="display:flex; justify-content: center;font-weight: 400;color:black">Email</label>
                     </div>
   
-                  </div>-->
+                  </div>
                   <div class="col-md-6 mb-4 d-flex align-items-center">
   
                     <div class="form-outline">
