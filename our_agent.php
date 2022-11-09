@@ -83,7 +83,8 @@
           $cost=$row['order_bill'];
             $x=$row['ocurrent_status'];
             $x1="delivered";
-            if($x!=$x1)
+            $x2="Rejected";
+            if(($x!=$x1)&&($x!=$x2))
             {
                 table($i,$id,$Uname,$Unumber,$address,$cost);
             }

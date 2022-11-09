@@ -13,10 +13,13 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </head>
+<link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
   <body>
     <?php
-        include('navbar.php');
+        require('navbar.php');
     ?>
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100" style="margin-top: 100px;">
@@ -30,8 +33,8 @@
                   <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
-                        <input type="email" id="emailAddress" name="email" class="form-control form-control-lg" required />
-                        <label class="form-label" for="emailAddress"style="display:flex; justify-content: center;font-weight: 400;color:black">Email</label>
+                        <input type="text" id="emailAddress" name="name" class="form-control form-control-lg" required />
+                        <label class="form-label" for="emailAddress"style="display:flex; justify-content: center;font-weight: 400;color:black">Name</label>
                     </div>
   
                   </div>

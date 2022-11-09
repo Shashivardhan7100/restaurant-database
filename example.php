@@ -44,8 +44,7 @@
     }
     else if($row['password']==$v2)
     {
-      if($_SERVER['REQUEST_METHOD']=='POST')
-      {
+      
       $v=$_POST['email'];
       $query="select * from customer where email_id='$v'";
       $result=mysqli_query($dc,$query);
@@ -57,7 +56,7 @@
         'customer_id'=>$row['customer_id']
       );
       }
-      }
+      
         include('body5.php');
     }
     else
