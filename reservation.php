@@ -1,7 +1,20 @@
 <?php
-session_start();
-include('mysqli_connect.php');
-include('functions.php');
+  session_start();
+  include('mysqli_connect.php');
+  include('functions.php');
+  if($_SERVER['REQUEST_METHOD']=="POST")
+  {
+      $name=$_POST['name'];
+      $total=$_POST['total'];
+      $slot=$_POST['slot'];
+      $id=$_SESSION['details'][0]['customer_id'];
+      $query="insert into table_reg(customer_name,total_members,slot,customer_id) values ('$name','$total','$slot','$id')";
+      if(mysqli_query($dc,$query))
+      {
+        echo "<script>alert('Registered successfully...')</script>";
+              echo  "<script>window.location='reservation.php'</script>";
+      }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -46,18 +59,18 @@ include('functions.php');
                   <div class="col-md-6 mb-4 d-flex align-items-center">
   
                     <div class="form-outline">
-                        <input type="number" id="price" name="price" class="form-control form-control-lg" />
+                        <input type="number" id="price" name="total" class="form-control form-control-lg" />
                         <label class="form-label" for="price"style="display:flex; justify-content: center;font-weight: 400;color:black">Total Members</label>
                       </div>      
                   </div>
                 </div>
                 <div class="row" style="display:flex; justify-content: center;">
-                    <select class="select" style="text-align: center;width:170px;height:40px;border-width:3px;font-weight: 400;color:black">
-                        <option value="" disabled="disabled" selected="selected">select Your Slot</option>
-                        <option value="1">2PM-4PM</option>
-                        <option value="2">4PM-6PM</option>
-                        <option value="3">6PM-8PM</option>
-                        <option value="4">8PM-10PM</option>
+                    <select class="select" name="slot" style="text-align: center;width:170px;height:40px;border-width:3px;font-weight: 400;color:black">
+                        <option disabled="disabled" selected="selected">select Your Slot</option>
+                        <option value="2PM-4PM">2PM-4PM</option>
+                        <option value="4PM-6PM">4PM-6PM</option>
+                        <option value="6PM-8PM">6PM-8PM</option>
+                        <option value="8PM-10PM">8PM-10PM</option>
                       </select>
                 </div>
   
