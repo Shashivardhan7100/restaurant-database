@@ -92,4 +92,33 @@ function orders($sno,$order_id,$order_status,$cost,$agentname,$phonenumber)
     ";
     print "$v2";
 }
+
+function table($i,$id,$Uname,$Unumber,$address,$cost)
+{
+    $tables="
+    <tr>
+      <th scope=\"row\">$i</th>
+      <td>$id</td>
+      <td>
+        <form action=\"our_agent.php\" method=\"post\">
+          <select name=\"status\" style=\"background-color: grey;\">
+            <option value=\"order status\"style=\"color:white;\">order status</option>
+            <option value=\"Rejected\"  value=\"rejected\" style=\"color:red\">Rejected</option>
+            <option value=\"Accepted\"  value=\"accepted\" style=\"color:green\">Accepted</option>
+            <option value=\"On My Way\"  value=\"On My Way\"  style=\"color:orange\">On My Way</option>
+            <option value=\"delivered\"  value=\"delivered\" style=\"color:green\"><span style=\"color:green\">delivered</span></option>
+          </select>
+          <input class=\"btn btn-primary btn-sm \" type=\"submit\" value=\"Submit\" />
+          <input type=\"hidden\" value=\"$id\" name=\"id\">
+        </form>
+      </td>
+      <td>$Uname</td>
+      <td>$Unumber</td>
+      <td>$address</td>
+      <td>$cost</td>
+    </tr>
+    ";
+
+    print "$tables";
+}
 ?>

@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    include('mysqli_connect.php');
+    include('functions.php');
+    if($_SERVER['REQUEST_METHOD']=='POST')
+    {
+      $id=$_POST['id'];
+      $status=$_POST['status'];
+      $query5="update orders set ocurrent_status='$status' where order_id='$id'";
+      mysqli_query($dc,$query5);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,13 +32,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item ">
-              <a class="our-logo nav-link" href="our_agent.html">Current Order</a>
+              <a class="our-logo nav-link" href="our_agent.php">Current Order</a>
             </li>
             <li class="nav-item">
-              <a class="our-logo nav-link" href="">Your History</a>
+              <a class="our-logo nav-link" href="netorders.php">Your History</a>
             </li>
             <li class="nav-item">
-              <a class="our-logo nav-link" href="">LogOut</a>
+              <a class="our-logo nav-link" href="logout.php">LogOut</a>
             </li>
           </ul>
         </div>
@@ -37,7 +49,7 @@
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >
     <tr>
-      <th scope="col">DATE</th>
+      <th scope="col">S.no</th>
       <th scope="col">ORDER_ID</th>
       <th scope="col">STATUS</th>
       <th scope="col">USER_NAME</th>
@@ -48,43 +60,35 @@
   </thead>
   <tbody >
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>
-        <form action="">
-          <select style="background-color: grey;">
-            <option value="order status"style="color:white;">order status</option>
-            <option value="Rejected" style="color:red">Rejected</option>
-            <option value="Accepted"style="color:green">Accepted</option>
-            <option value="On My Way"style="color:orange">On My Way</option>
-            <option value="delivered"style="color:green"><span style="color:green">delivered</span></option>
-          </select>
-          <input class="btn btn-primary btn-sm " type="submit" value="Submit" />
-        </form>
-      </td>
-      <td>@mdo</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
+      <?php
+      $v=$_SESSION['details'][0]['email'];
+        $query="select * from employee where email_id='$v'";
+        $result=mysqli_query($dc,$query);
+        $row1=mysqli_fetch_array($result);
+        $v1=$row1['name'];
+        $query2="select * from orders where agentname='$v1'";
+        $result2=mysqli_query($dc,$query2);
+        $i=0;
+        while($row=mysqli_fetch_array($result2))
+        {
+          $i++;
+          $id=$row['order_id'];
+          $cid=$row['customer_id'];
+          $query3="select * from customer where customer_id='$cid' ";
+          $result3=mysqli_query($dc,$query3);
+          $row3=mysqli_fetch_array($result3);
+          $Uname=$row3['first_name'];
+          $Unumber=$row3['Ph_no'];
+          $address=$row3['address'];
+          $cost=$row['order_bill'];
+            $x=$row['ocurrent_status'];
+            $x1="delivered";
+            if($x!=$x1)
+            {
+                table($i,$id,$Uname,$Unumber,$address,$cost);
+            }
+        }
+      ?>
   </tbody>
 </table>
 </div>
