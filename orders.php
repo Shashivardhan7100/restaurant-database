@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <?php
       include('navbar.php');
     ?>
@@ -67,7 +67,7 @@
         </div>
       </nav>-->
       <div class="container"style=" margin-top : 100px;">
-        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900">ORDERS</h1>
+        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white">ORDERS</h1>
         <div class="mx-auto">
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >
