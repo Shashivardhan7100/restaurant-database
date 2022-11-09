@@ -49,7 +49,7 @@
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >
     <tr>
-      <th scope="col">S.no</th>
+      <th scope="col">DATE</th>
       <th scope="col">ORDER_ID</th>
       <th scope="col">STATUS</th>
       <th scope="col">USER_NAME</th>
@@ -68,10 +68,10 @@
         $v1=$row1['name'];
         $query2="select * from orders where agentname='$v1'";
         $result2=mysqli_query($dc,$query2);
-        $i=0;
+        
         while($row=mysqli_fetch_array($result2))
         {
-          $i++;
+          $i=date("Y/m/d");
           $id=$row['order_id'];
           $cid=$row['customer_id'];
           $query3="select * from customer where customer_id='$cid' ";

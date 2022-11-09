@@ -30,7 +30,7 @@
               <a class="our-logo nav-link" href="menuchange.html">Menu_Change</a>
             </li>
             <li class="nav-item">
-              <a class="our-logo nav-link" href="totalorders.html">Orders</a>
+              <a class="our-logo nav-link" href="totalorders.php">Orders</a>
             </li>
             <li class="nav-item ">
               <a class="our-logo nav-link" href="assignorder.html">Assign_Order</a>
@@ -59,10 +59,9 @@
     <?php
         $query="select * from orders";
         $result=mysqli_query($dc,$query);
-        $i=0;
         while($row = mysqli_fetch_array($result))
         {
-          $i++;
+          $i=date("Y/m/d");
             orders($i,$row['order_id'],$row['ocurrent_status'],$row['order_bill'],$row['agentname'],$row['phonenumber']);
         }
     ?>
