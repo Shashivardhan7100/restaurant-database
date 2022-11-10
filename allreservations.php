@@ -31,19 +31,19 @@
     <tr>
     <th scope="col">Reservation-ID</th>
       <th scope="col">DATE</th>
+      <th scope="col">CUSTOMER NAME</th>
       <th scope="col">SLOT</th>
       <th scope="col">STATUS</th>
     </tr>
   </thead>
   <tbody >
     <?php
-        $id=$_SESSION['details'][0]['customer_id'];
-        $query="select * from table_reg where customer_id='$id'";
+        $query="select * from table_reg";
         $result=mysqli_query($dc,$query);
         $i=date("Y/m/d");
         while($row=mysqli_fetch_array($result))
         {
-            slots($row['reg_id'],$i,$row['slot'],$row['tcurrent_status']);
+            slots2($row['reg_id'],$i,$row['customer_name'],$row['slot'],$row['tcurrent_status']);
         }
     ?>
   </tbody>

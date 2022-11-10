@@ -56,14 +56,14 @@ foreign key (emp_id) references employee(emp_id)
 );
 
 create table table_reg(
-	table_no int not null AUTO_INCREMENT,
-    tcurrent_status varchar(20) default 'reserved',
+	reg_id int not null AUTO_INCREMENT,
+    tcurrent_status varchar(20) default 'accepted',
     customer_id int,
     customer_name varchar(200),
     total_members int,
     slot varchar(200),
     emp_id int,
-    primary key(table_no),
+    primary key(reg_id),
     foreign key (customer_id) references customer(customer_id)
 		on delete set null on update cascade,
 	foreign key (emp_id) references employee(emp_id)

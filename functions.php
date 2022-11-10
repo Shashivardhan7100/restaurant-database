@@ -139,5 +139,30 @@ function table2($i,$id,$status,$Uname,$Unumber,$address,$cost)
     print "$tables";
 }
 
+function slots($id,$date,$slot,$status)
+{
+  $slots="
+  <td>$id</td>
+    <td>$date</td>
+    <td>$slot</td>
+    <td>$status</td>
+  ";
+  print "$slots";
+
+}
+
+
+function slots2($id,$date,$name,$slot,$status)
+{
+  $slots="
+  <td>$id</td>
+    <td>$date</td>
+    <td>$name</td>
+    <td>$slot</td>
+    <td>$status</td>
+  ";
+  print "$slots";
+
+}
 
 ?>

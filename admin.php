@@ -32,6 +32,9 @@
               <a class="our-logo nav-link" href="assignorder.html">Assign_Order</a>
             </li>
             <li class="nav-item ">
+            <a class="our-logo nav-link" href="allreservations.php">Resevations</a>
+            </li>
+            <li class="nav-item ">
               <a class="our-logo nav-link" href="add_employee.html">Add_Employee</a>
             </li>
           </ul>
