@@ -37,7 +37,7 @@
         </div>
       </nav>
       <div class="container"style=" margin-top : 100px;">
-        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white">CURRENT ORDERS</h1>
+        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white">PREVIOUS ORDERS</h1>
         <div class="mx-auto">
         <table class="table dhee"style=" margin-top : 50px; background-color:grey;font-weight:500">
   <thead class="thead-dark" >
