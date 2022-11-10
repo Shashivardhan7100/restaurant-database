@@ -32,9 +32,9 @@
   </thead>
   <tbody >
   <td>1</td>
-    <td>shashi</td>
-    <td>vardhan</td>
-    <td>reddy</td>
+    <td>22/12/22</td>
+    <td>2PM-4PM</td>
+    <td>ACCEPTED</td>
   </tbody>
 </table>
 </div>
