@@ -111,21 +111,21 @@ alter table employee add foreign key (dept_id) references department(dept_id);
     Rating int,
     img varchar(20), */
     
-    insert into menu(item_name,cost,img) values ('chicken',250,'product-images\\dish-11.jpg'),
-    ('pastree',250,'product-images\\dish-4.jpg'),('pastree',250,'product-images\\dish-5.jpg'),('pastree',250,'product-images\\dish-6.jpg'),
-    ('pastree',250,'product-images\\dish-7.jpg'),('pastree',250,'product-images\\dish-8.jpg'),('pastree',250,'product-images\\dish-9.jpg'),
-    ('pastree',250,'product-images\\dish-10.jpg');
-    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\dessert-5.jpg'),
-    ('pastree',250,'product-images\\dessert-6.jpg'),('pastree',250,'product-images\\dessert-7.jpg'),('pastree',250,'product-images\\dessert-8.jpg'),
-    ('pastree',250,'product-images\\dessert-9.jpg'),('pastree',250,'product-images\\dessert-10.jpg'),('pastree',250,'product-images\\dessert-11.jpg'),
-    ('pastree',250,'product-images\\dessert-12.jpg');
-    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\drink-1.jpg'),
-    ('pastree',250,'product-images\\drink-2.jpg'),('pastree',250,'product-images\\drink-3.jpg'),('pastree',250,'product-images\\drink-4.jpg'),
-    ('pastree',250,'product-images\\drink-5.jpg'),('pastree',250,'product-images\\drink-6.jpg'),('pastree',250,'product-images\\drink-7.jpg'),
-    ('pastree',250,'product-images\\drink-8.jpg');
-    insert into menu(item_name,cost,img) values ('pastree',250,'product-images\\stater-1.jpg'),
-    ('pastree',250,'product-images\\stater-2.jpg'),('pastree',250,'product-images\\stater-3.jpg'),('pastree',250,'product-images\\stater-4.jpg'),
-    ('pastree',250,'product-images\\stater-5.jpg'),('pastree',250,'product-images\\stater-6.jpg'),('pastree',250,'product-images\\stater-7.jpg'),
-    ('pastree',250,'product-images\\stater-8.jpg');
+    insert into menu(item_name,cost,img) values ('Chicken Quesadillas',400,'product-images\\dish-11.jpg'),
+    ('Mutton Rack',900,'product-images\\dish-4.jpg'),('Sea Shrimp',700,'product-images\\dish-5.jpg'),('Chicken Roast',600,'product-images\\dish-6.jpg'),
+    ('Chicken Carcass',1100,'product-images\\dish-7.jpg'),('Italian Crabs',750,'product-images\\dish-8.jpg'),('Sea Bass Tartare',600,'product-images\\dish-9.jpg'),
+    ('Frittura Paranza',500,'product-images\\dish-10.jpg');
+    insert into menu(item_name,cost,img) values ('Cannaby Growy',200,'product-images\\dessert-5.jpg'),
+    ('Banana Split',100,'product-images\\dessert-6.jpg'),('Mapple Syrup',135,'product-images\\dessert-7.jpg'),('Choux Pastry',170,'product-images\\dessert-8.jpg'),
+    ('Chocolate Brownie',250,'product-images\\dessert-9.jpg'),('PanCake',130,'product-images\\dessert-10.jpg'),('Special Waffle',150,'product-images\\dessert-11.jpg'),
+    ('Cinnamon Roll',120,'product-images\\dessert-12.jpg');
+    insert into menu(item_name,cost,img) values ('Beer Mug',250,'product-images\\drink-4.jpg'),
+    ('Rose Wine',300,'product-images\\drink-2.jpg'),('Fresh Mojito',150,'product-images\\drink-3.jpg'),('Lemon juice',100,'product-images\\drink-1.jpg'),
+    ('Spirtz Cocktail',250,'product-images\\drink-5.jpg'),('Iced Tea',100,'product-images\\drink-6.jpg'),('Hugo',250,'product-images\\drink-7.jpg'),
+    ('CockTail',300,'product-images\\drink-8.jpg');
+    insert into menu(item_name,cost,img) values ('Baguette',200,'product-images\\stater-1.jpg'),
+    ('Bruschetta',350,'product-images\\stater-2.jpg'),('Non-Veg Platter',300,'product-images\\stater-3.jpg'),('Rotisserie Chicken',500,'product-images\\stater-4.jpg'),
+    ('Cigerette Borek',400,'product-images\\stater-5.jpg'),('Chicken Nuggets',200,'product-images\\stater-6.jpg'),('Spicy Shrimp',300,'product-images\\stater-7.jpg'),
+    ('PaniPuri',50,'product-images\\stater-8.jpg');
     
     

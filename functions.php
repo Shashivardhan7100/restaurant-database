@@ -8,8 +8,8 @@ $example="
   <div class=\"ganesh-cards card\" style=\"width: 18rem;\">
   <img class=\"card-img-top\" src= \"$image\" alt=\"Card image cap\">
   <div class=\"card-body\">
-  <h5 class=\"card-title\">$name</h5>
-  <p>PRICE: $cost RS</p>
+  <h5 class=\"card-title\"style=\"color:black;font-weight:700\">$name</h5>
+  <p style=\"font-weight:600\">PRICE: $cost RS</p>
   <div style=\"margin-bottom:10px\">
   <input type=\"int\" name=\"quantity\" placeholder=\"Quantity\" required style=\"width:108px\">
   </div>

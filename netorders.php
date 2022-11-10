@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky-top fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark position-sticky-top fixed-top" style="background-color:#050A30">
         <a class="navbar-brand" href="our_agent.php"><img class="title-logo"src="img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

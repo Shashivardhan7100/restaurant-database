@@ -23,7 +23,10 @@
             ?>
       </li>
       <li class="nav-item " >
-        <a class="our-logo nav-link" href="reservation.php" style="font-size:1.25rem">REservations</a>
+        <a class="our-logo nav-link" href="reservation.php" style="font-size:1.25rem">TABLES</a>
+      </li>
+      <li class="nav-item">
+    <a class="our-logo nav-link" href="yourreservations.php" style="font-size:1.25rem">REservations</a>
       </li>
       <li class="nav-item">
         <a class="our-logo nav-link" href="orders.php" style="font-size:1.25rem">Orders</a>

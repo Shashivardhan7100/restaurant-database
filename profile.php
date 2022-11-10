@@ -16,7 +16,7 @@
     ?>
   <body style="background-image:url('https://images.pexels.com/photos/6985260/pexels-photo-6985260.jpeg?auto=compress&cs=tinysrgb&w=400');background-size:cover;background-repeat:no-repeat">
     <section >
-        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white">Your Profile</h1>
+        <h1 class="text-center"style="font-family: 'Shalimar', cursive; font-weight:900;color:white;margin-top:90px">Your Profile</h1>
         <div class="container py-5">
           <div class="row">
             <div class="col-lg-4">
