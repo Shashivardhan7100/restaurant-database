@@ -7,7 +7,7 @@
       $name=$_POST['name'];
       $total=$_POST['total'];
       $slot=$_POST['slot'];
-      $id=$_SESSION['details'][0]['customer_id'];
+      $id=$_COOKIE['customer_id'];
       $query="insert into table_reg(customer_name,total_members,slot,customer_id) values ('$name','$total','$slot','$id')";
       if(mysqli_query($dc,$query))
       {

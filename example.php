@@ -1,8 +1,22 @@
 <?php
     session_start();
-  include('functions.php');
-  include('mysqli_connect.php');
-  include('mysqli_connect.php');
+    
+    
+    require('functions.php');
+    require('mysqli_connect.php');
+    $v=$_POST['email'];
+      $query="select * from customer where email_id='$v'";
+      $result=mysqli_query($dc,$query);
+      $row=mysqli_fetch_array($result);
+      if(isset($row['customer_id']))
+      {
+        setcookie('email',$_POST['email']);
+        setcookie('customer_id',$row['customer_id']);
+      $_SESSION['details'][0]=array(
+        'email'=>$_POST['email'],
+        'customer_id'=>$row['customer_id']
+      );
+      }
 ?>
 <!DOCTYPE html>
 <html lang="en">

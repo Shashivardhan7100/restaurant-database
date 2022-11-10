@@ -9,6 +9,7 @@
     {
     $v2=date('d/m/y H:i:s');
     $v3=$_SESSION['details'][0]['customer_id'];
+    global $v3;
     $query="insert into orders(order_bill,ordered_date,customer_id) value ('$v1','$v2','$v3')";
     if(mysqli_query($dc,$query))
     {
@@ -85,7 +86,9 @@
   </thead>
   <tbody >
     <?php 
-        $v=$_SESSION['details'][0]['customer_id'];
+        //$v=$_SESSION['details'][0]['customer_id'];
+        $v=$_COOKIE['customer_id'];
+        
         $query="select * from orders where customer_id='$v'";
         $result=mysqli_query($dc,$query);
         $number=mysqli_num_rows($result);
@@ -102,7 +105,7 @@
         }
         else
         {
-          //orders section is empty
+          print "$example";
         }
     ?>
   </tbody>

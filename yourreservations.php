@@ -37,7 +37,7 @@
   </thead>
   <tbody >
     <?php
-        $id=$_SESSION['details'][0]['customer_id'];
+        $id=$_COOKIE['customer_id'];
         $query="select * from table_reg where customer_id='$id'";
         $result=mysqli_query($dc,$query);
         $i=date("Y/m/d");
