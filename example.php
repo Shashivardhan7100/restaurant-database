@@ -52,7 +52,7 @@
       $query="select * from customer where email_id='$v'";
       $result=mysqli_query($dc,$query);
       $row=mysqli_fetch_array($result);
-      if(isset($row['customer_id']))
+      if(!empty($row['customer_id']))
       {
       $_SESSION['details'][0]=array(
         'email'=>$_POST['email'],
