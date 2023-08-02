@@ -13,13 +13,11 @@ Created an online web application for users to place restaurant orders.
 
 
 
-![WhatsApp Image 2023-08-02 at 1 01 19 PM (1)](https://github.com/Shashivardhan7100/restaurant-database/assets/106879288/bce7ae1d-8de8-42e8-9f37-2b91c205a57a)
+![WhatsApp Image 2023-08-02 at 1 01 19 PM (1)](https://github.com/Shashivardhan7100/restaurant-database/assets/106879288/9eef4379-98ad-4b2e-97b0-c81b801d0629)
 
 
 
 
 
 
-
-
-![WhatsApp Image 2023-08-02 at 1 02 47 PM](https://github.com/Shashivardhan7100/restaurant-database/assets/106879288/25967b03-95ff-4f87-ac50-39b44b72ad00)
+![WhatsApp Image 2023-08-02 at 1 02 46 PM](https://github.com/Shashivardhan7100/restaurant-database/assets/106879288/e2e4caea-c607-4066-b353-ad43825ed635)
